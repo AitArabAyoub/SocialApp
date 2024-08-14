@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react"
 import { GetUser } from "../lib/react-query/queries"
 import { EditUser } from "../lib/react-query/mutations"
 import { useAppDispatch, useAppSelector } from "../store/hooks"

@@ -23,7 +23,7 @@ function EditForm() {
         handleSubmit,
         formState: { errors },
     } = useForm<Inputs>();
-    const {mutate,error,isSuccess,isPending} = EditUser()
+    const {mutate,isSuccess,isPending} = EditUser()
     async function submitForm(data:Inputs) {
         if(user){
             // upload image to storage firebase ProfileImgs folder 

@@ -5,18 +5,12 @@ import { Link, useNavigate } from "react-router-dom";
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { auth, db } from "../firebase/firebase";
 import { doc, getDoc } from "firebase/firestore";
-import { TNewUser } from "../types";
 import { useAppDispatch } from "../store/hooks";
 import { login } from "../store/AuthSlice";
 export default function LogFrom() {
     const dispatch = useAppDispatch()
     const Navigate = useNavigate()
-    const [
-        signInWithEmailAndPassword,
-        user,
-        loading,
-        error,
-    ] = useSignInWithEmailAndPassword(auth);
+    const [signInWithEmailAndPassword,,,error,] = useSignInWithEmailAndPassword(auth);
     const {
         register,
         handleSubmit,

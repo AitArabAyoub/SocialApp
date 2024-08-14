@@ -68,6 +68,3 @@ export const getFeedPosts = async(ids:string[])=>{
     posts.sort((a:any, b:any) => b.createdAt - a.createdAt)
     return posts
 }
-export const UnfolowUser = async(id:string)=>{
-    
-}

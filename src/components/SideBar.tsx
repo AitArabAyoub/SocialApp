@@ -1,4 +1,4 @@
-import { House, BookMarked, FilePlus, LogOut,User, Search } from "lucide-react"
+import { House,FilePlus, LogOut,User, Search } from "lucide-react"
 import { NavLink, useNavigate } from "react-router-dom"
 import { useAppDispatch, useAppSelector } from "../store/hooks"
 import { logout } from "../store/AuthSlice"

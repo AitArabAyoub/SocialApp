@@ -4,7 +4,7 @@ import { AddComment, DeletePost, EditUser, HandleLike } from '../lib/react-query
 import { useAppDispatch, useAppSelector } from '../store/hooks'
 import { deletePost } from '../store/AuthSlice'
 import { useForm, SubmitHandler } from "react-hook-form"
-import { Comment, TComment, TNewPost, TPost } from '../types'
+import { Comment, TComment,TPost } from '../types'
 import PostComment from '../components/PostComment'
 
 type Inputs = {
@@ -15,12 +15,11 @@ function Post() {
     const {
         register,
         handleSubmit,
-        watch,
         formState: { errors },
     } = useForm<Inputs>()
     const{postid} = useParams()
-    const {data:post,isLoading,isError} = GetPost(postid as string)
-    const {data:Authuser,isLoading:loading} = GetUser(post?.createdBy as string)
+    const {data:post} = GetPost(postid as string)
+    const {data:Authuser} = GetUser(post?.createdBy as string)
     const {user} = useAppSelector(store => store.auth)
     const {mutateAsync,error:DeleteError,isSuccess:DeleteSuccess} = DeletePost()
     const {mutateAsync:Addcomment,isSuccess:IsAdded,isError:IsNotAdded,isPending:isAdding} = AddComment()

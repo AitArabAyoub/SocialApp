@@ -1,4 +1,4 @@
-import { Comment, TComment } from '../types'
+import { TComment } from '../types'
 import { GetUser } from '../lib/react-query/queries'
 
 type Props = {

@@ -1,4 +1,4 @@
-import { Comment, TComment, TNewPost, TPost } from "../types"
+import { Comment,TPost } from "../types"
 import { GetUser } from "../lib/react-query/queries"
 import { useAppSelector } from "../store/hooks"
 import { AddComment, HandleLike } from "../lib/react-query/mutations"
@@ -23,7 +23,6 @@ function FeedPost({post }:Props) {
     const {
         register,
         handleSubmit,
-        watch,
         formState: { errors },
     } = useForm<Inputs>()
     const onSubmit: SubmitHandler<Inputs> = async(data) => {

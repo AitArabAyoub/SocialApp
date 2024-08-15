@@ -9,7 +9,15 @@
             "dest" : "/"
         },
         {
+            "src" : "/post/:postid",
+            "dest" : "/"
+        },
+        {
             "src" : "/profile",
+            "dest" : "/"
+        },
+        {
+            "src" : "/profile/:userid",
             "dest" : "/"
         },
         {

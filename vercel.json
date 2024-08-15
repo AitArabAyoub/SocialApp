@@ -9,7 +9,7 @@
             "dest" : "/"
         },
         {
-            "src" : "/post/:postid",
+            "src" : "/post/postid",
             "dest" : "/"
         },
         {
@@ -17,7 +17,7 @@
             "dest" : "/"
         },
         {
-            "src" : "/profile/:userid",
+            "src" : "/profile/userid",
             "dest" : "/"
         },
         {

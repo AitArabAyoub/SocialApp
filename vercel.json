@@ -1,35 +1,3 @@
 {
-    "routes" : [
-        {
-            "src" : "/",
-            "dest" : "/"
-        },
-        {
-            "src" : "/post",
-            "dest" : "/"
-        },
-        {
-            "src" : "/post/postid",
-            "dest" : "/"
-        },
-        {
-            "src" : "/profile",
-            "dest" : "/"
-        },
-        {
-            "src" : "/profile/userid",
-            "dest" : "/"
-        },
-        {
-            "src" : "/new",
-            "dest" : "/"
-        },
-        {
-            "src" : "/register",
-            "dest" : "/"
-        },        {
-            "src" : "/login",
-            "dest" : "/"
-        }
-    ]
+    "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
